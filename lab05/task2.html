@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Of Sphere</title>
+</head>
+<body >
+    <h2 style="text-align: center; color: rgb(183, 0, 255); font-family: 'Franklin Gothic Medium';">Input radius value and get the volume of sphere</h2>
+    <br>
+    <form style="text-align: center;">
+        <h3 style="color: rgb(255, 0, 212);">Radius</h3>
+        <input type = number id="Rad" name="rad">
+        <h3 style="color:  rgb(255, 0, 212);">Volume</h3>
+        <input type = number id="vol" name="vol">
+        <br>
+        <button type="button" id="btn" style="background-color: rgb(255, 0, 212);">Calculate Volume</button>
+    </form>
+    <script type="text/javascript">
+function calculateVolume() {
+let radius = document.getElementById("Rad").value;
+let volume = 4/3*Math.PI*Math.pow(radius,3);
+document.getElementById("vol").value = volume.toFixed(2);
+}
+let button = document.getElementById("btn");
+button.onclick = calculateVolume;
+
+    </script>
+</body>
+</html>
